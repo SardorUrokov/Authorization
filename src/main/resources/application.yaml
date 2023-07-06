@@ -1,0 +1,28 @@
+server:
+  port: 8333
+
+#DATABASE CONFIGURATION
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: root123
+  jpa:
+    open-in-view: true
+    generate-ddl: true
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+  devtools:
+    livereload:
+      enabled: false
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  main:
+    allow-bean-definition-overriding: true
+
+#PROXY SETTINGS
+proxy:
+  host: 10.5.49.208
+  port: 8080
